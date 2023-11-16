@@ -6,11 +6,12 @@ services:
     networks:
       - envoymesh
     expose:
+      - "443"
       - "8080"
       - "8001"
     ports:
       - "80:8080"
-      - "443:8080"
+      - "443:443"
       - "8001:8001"
       - "8080:8080"
   emulator:

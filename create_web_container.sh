@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
 DOCKER_YAML=js/docker/docker-compose-build.yaml
 
 # Fancy colors in the terminal
@@ -96,9 +97,9 @@ generate_keys
 cp ~/.android/adbkey js/docker/certs
 
 # compose the container
-python -m venv .docker-venv
+python3 -m venv .docker-venv
 source .docker-venv/bin/activate
-pip install docker-compose
+# pip install docker-compose
 docker-compose -f ${DOCKER_YAML} build
 rm js/docker/certs/adbkey
 
